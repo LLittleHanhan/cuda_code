@@ -1,0 +1,225 @@
+typedef char __nv_bool;
+# 2876 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/driver_types.h"
+struct CUstream_st;
+# 209 "/home/xiongqian/install_pkg/gcc-9.1.0-build/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include/stddef.h" 3
+typedef unsigned long size_t;
+#include "crt/device_runtime.h"
+# 254 "/home/xiongqian/install_pkg/gcc-9.1.0-build/include/c++/9.1.0/x86_64-pc-linux-gnu/bits/c++config.h" 3
+typedef unsigned long _ZSt6size_t;
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+# 109 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ enum cudaError __cudaCDP2Malloc(void **, size_t);
+# 591 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ enum cudaError _ZN37_INTERNAL_ce61aa04_7_test_cu_593f846c10cudaMallocEPPvm(void **, size_t);
+#if !defined(__CUDABE__)
+# 153 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/crt/common_functions.h"
+ __device_builtin__ ___device__(extern  __no_sc__) int printf(const char *__restrict__, ...);
+#endif
+# 3641 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/crt/device_functions.h"
+___device__(extern  __no_sc__) unsigned __cudaPushCallConfiguration(struct dim3, struct dim3, size_t, struct CUstream_st *);
+# 761 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+___device__(static  __no_sc__) __inline__ enum cudaError _ZN37_INTERNAL_ce61aa04_7_test_cu_593f846c10cudaMallocIiEE9cudaErrorPPT_m(int **, size_t);
+# 7 "test.cu"
+__global__ __var_used__ extern void _Z12kernel_IADD3Pi(int *);
+# 431 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/vector_types.h"
+___device__(static  __no_sc__) __inline__ void _ZN4dim3C1Ejjj(struct dim3 *const, unsigned, unsigned, unsigned);
+___device__(static  __no_sc__) __inline__ void _ZN4dim3C2Ejjj(struct dim3 *const, unsigned, unsigned, unsigned);
+#include "common_functions.h"
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+#if !defined(__CUDABE__)
+#endif
+# 109 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ enum cudaError __cudaCDP2Malloc(
+# 109 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+void **p, 
+# 109 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+size_t s){
+# 110 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+{
+# 111 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+return cudaErrorUnknown;
+# 112 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+}}
+# 591 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+___device__(static  __no_sc__) __inline__ enum cudaError _ZN37_INTERNAL_ce61aa04_7_test_cu_593f846c10cudaMallocEPPvm(
+# 591 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+void **devPtr, 
+# 591 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+size_t size){
+# 592 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+{
+# 593 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+return __cudaCDP2Malloc(devPtr, size);
+# 594 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_device_runtime_api.h"
+}}
+#if !defined(__CUDABE__)
+#endif
+# 761 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+___device__(static  __no_sc__) __inline__ enum cudaError _ZN37_INTERNAL_ce61aa04_7_test_cu_593f846c10cudaMallocIiEE9cudaErrorPPT_m(
+# 762 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+int **devPtr, 
+# 763 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+size_t size){
+# 765 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+{
+# 766 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+return _ZN37_INTERNAL_ce61aa04_7_test_cu_593f846c10cudaMallocEPPvm(((void **)((void *)devPtr)), size);
+# 767 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/cuda_runtime.h"
+}}
+# 7 "test.cu"
+__global__ __var_used__ void _Z12kernel_IADD3Pi(
+# 7 "test.cu"
+int *data){
+# 7 "test.cu"
+{
+# 8 "test.cu"
+ int __cuda_local_var_25079_9_non_const_a[2];
+# 8 "test.cu"
+ int __cuda_local_var_25079_15_non_const_b[2];
+# 8 "test.cu"
+ int __cuda_local_var_25079_21_non_const_c[2];
+# 8 "test.cu"
+ int __cuda_local_var_25079_27_non_const_d[2];
+# 8 "test.cu"
+ int __cuda_local_var_25079_33_non_const_e[2];
+# 8 "test.cu"
+ int __cuda_local_var_25079_39_non_const_f[2];
+# 9 "test.cu"
+((__cuda_local_var_25079_9_non_const_a)[0]) = (data[0]);
+# 10 "test.cu"
+((__cuda_local_var_25079_9_non_const_a)[1]) = (data[1]);
+# 11 "test.cu"
+((__cuda_local_var_25079_15_non_const_b)[0]) = (data[2]);
+# 12 "test.cu"
+((__cuda_local_var_25079_15_non_const_b)[1]) = (data[3]);
+# 13 "test.cu"
+((__cuda_local_var_25079_21_non_const_c)[0]) = (data[4]);
+# 14 "test.cu"
+((__cuda_local_var_25079_21_non_const_c)[1]) = (data[5]);
+# 15 "test.cu"
+((__cuda_local_var_25079_27_non_const_d)[0]) = (data[6]);
+# 16 "test.cu"
+((__cuda_local_var_25079_27_non_const_d)[1]) = (data[7]);
+# 17 "test.cu"
+((__cuda_local_var_25079_33_non_const_e)[0]) = (data[8]);
+# 18 "test.cu"
+((__cuda_local_var_25079_33_non_const_e)[1]) = (data[9]);
+# 19 "test.cu"
+((__cuda_local_var_25079_39_non_const_f)[0]) = (data[10]);
+# 20 "test.cu"
+((__cuda_local_var_25079_39_non_const_f)[1]) = (data[11]);
+# 22 "test.cu"
+{
+# 22 "test.cu"
+ int i;
+# 22 "test.cu"
+i = 0;
+# 22 "test.cu"
+for (; i < 200000; i++)
+# 22 "test.cu"
+{
+# 23 "test.cu"
+{
+# 23 "test.cu"
+ int j;
+# 23 "test.cu"
+j = 0;
+# 23 "test.cu"
+for (; j < 2; j++)
+# 23 "test.cu"
+{
+# 24 "test.cu"
+((__cuda_local_var_25079_9_non_const_a)[j]) = ((((__cuda_local_var_25079_9_non_const_a)[j]) * ((__cuda_local_var_25079_15_non_const_b)[((j + 1) % 2)])) + ((__cuda_local_var_25079_21_non_const_c)[((j + 2) % 2)]));
+# 25 "test.cu"
+((__cuda_local_var_25079_27_non_const_d)[j]) = ((((__cuda_local_var_25079_27_non_const_d)[j]) + ((__cuda_local_var_25079_33_non_const_e)[((j + 1) % 2)])) + ((__cuda_local_var_25079_39_non_const_f)[((j + 2) % 2)]));
+# 26 "test.cu"
+} }
+# 27 "test.cu"
+{
+# 27 "test.cu"
+ int j;
+# 27 "test.cu"
+j = 0;
+# 27 "test.cu"
+for (; j < 2; j++)
+# 27 "test.cu"
+{
+# 28 "test.cu"
+((__cuda_local_var_25079_15_non_const_b)[j]) = ((((__cuda_local_var_25079_15_non_const_b)[j]) * ((__cuda_local_var_25079_21_non_const_c)[((j + 1) % 2)])) + ((__cuda_local_var_25079_9_non_const_a)[((j + 2) % 2)]));
+# 29 "test.cu"
+((__cuda_local_var_25079_33_non_const_e)[j]) = ((((__cuda_local_var_25079_33_non_const_e)[j]) + ((__cuda_local_var_25079_39_non_const_f)[((j + 1) % 2)])) + ((__cuda_local_var_25079_27_non_const_d)[((j + 2) % 2)]));
+# 30 "test.cu"
+} }
+# 31 "test.cu"
+{
+# 31 "test.cu"
+ int j;
+# 31 "test.cu"
+j = 0;
+# 31 "test.cu"
+for (; j < 2; j++)
+# 31 "test.cu"
+{
+# 32 "test.cu"
+((__cuda_local_var_25079_21_non_const_c)[j]) = ((((__cuda_local_var_25079_21_non_const_c)[j]) * ((__cuda_local_var_25079_9_non_const_a)[((j + 1) % 2)])) + ((__cuda_local_var_25079_15_non_const_b)[((j + 2) % 2)]));
+# 33 "test.cu"
+((__cuda_local_var_25079_39_non_const_f)[j]) = ((((__cuda_local_var_25079_39_non_const_f)[j]) + ((__cuda_local_var_25079_27_non_const_d)[((j + 1) % 2)])) + ((__cuda_local_var_25079_33_non_const_e)[((j + 2) % 2)]));
+# 34 "test.cu"
+} }
+# 35 "test.cu"
+} }
+# 36 "test.cu"
+(data[0]) = ((__cuda_local_var_25079_9_non_const_a)[0]);
+# 37 "test.cu"
+(data[1]) = ((__cuda_local_var_25079_9_non_const_a)[1]);
+# 38 "test.cu"
+(data[2]) = ((__cuda_local_var_25079_15_non_const_b)[0]);
+# 39 "test.cu"
+(data[3]) = ((__cuda_local_var_25079_15_non_const_b)[1]);
+# 40 "test.cu"
+(data[4]) = ((__cuda_local_var_25079_21_non_const_c)[0]);
+# 41 "test.cu"
+(data[5]) = ((__cuda_local_var_25079_21_non_const_c)[1]);
+# 42 "test.cu"
+(data[6]) = ((__cuda_local_var_25079_27_non_const_d)[0]);
+# 43 "test.cu"
+(data[7]) = ((__cuda_local_var_25079_27_non_const_d)[1]);
+# 44 "test.cu"
+(data[8]) = ((__cuda_local_var_25079_33_non_const_e)[0]);
+# 45 "test.cu"
+(data[9]) = ((__cuda_local_var_25079_33_non_const_e)[1]);
+# 46 "test.cu"
+(data[10]) = ((__cuda_local_var_25079_39_non_const_f)[0]);
+# 47 "test.cu"
+(data[11]) = ((__cuda_local_var_25079_39_non_const_f)[1]); 
+# 48 "test.cu"
+}}
+__asm__(".align 2");
+# 431 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/vector_types.h"
+___device__(static  __no_sc__) __inline__ void _ZN4dim3C1Ejjj( struct dim3 *const this, 
+# 431 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/vector_types.h"
+unsigned vx, 
+# 431 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/vector_types.h"
+unsigned vy, 
+# 431 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/vector_types.h"
+unsigned vz){
+# 431 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/vector_types.h"
+{
+# 431 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/vector_types.h"
+(this->x) = vx;
+# 431 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/vector_types.h"
+(this->y) = vy;
+# 431 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/vector_types.h"
+(this->z) = vz; 
+# 431 "/home/xiongqian/cuda-12.4/bin/../targets/x86_64-linux/include/vector_types.h"
+}}
+__asm__(".align 2");
+___device__(static  __no_sc__) __inline__ void _ZN4dim3C2Ejjj( struct dim3 *const this,  unsigned __T0,  unsigned __T1,  unsigned __T2){ {  _ZN4dim3C1Ejjj(this, __T0, __T1, __T2);  }}

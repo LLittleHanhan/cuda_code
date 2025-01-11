@@ -1,0 +1,173 @@
+
+Fatbin elf code:
+================
+arch = sm_70
+code version = [1,7]
+host = linux
+compile_size = 64bit
+
+Fatbin ptx code:
+================
+arch = sm_70
+code version = [8,3]
+host = linux
+compile_size = 64bit
+compressed
+
+
+
+
+
+
+
+
+.version 8.3
+.target sm_70
+.address_size 64
+
+
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e74cuda3std3__48in_placeE[1];
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e74cuda3std6ranges3__45__cpo4swapE[1];
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e74cuda3std6ranges3__45__cpo9iter_moveE[1];
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e76thrust6system6detail10sequential3seqE[1];
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e76thrust12placeholders2_1E[1];
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e76thrust12placeholders2_2E[1];
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e76thrust12placeholders2_3E[1];
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e76thrust12placeholders2_4E[1];
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e76thrust12placeholders2_5E[1];
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e76thrust12placeholders2_6E[1];
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e76thrust12placeholders2_7E[1];
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e76thrust12placeholders2_8E[1];
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e76thrust12placeholders2_9E[1];
+.global .align 1 .b8 _ZN37_INTERNAL_d559cd87_7_warp_cu_fbefb1e76thrust12placeholders3_10E[1];
+
+.visible .entry _Z8baselinePf(
+.param .u64 _Z8baselinePf_param_0
+)
+{
+.reg .f32 %f<3>;
+.reg .b32 %r<37>;
+.reg .b64 %rd<5>;
+
+
+ld.param.u64 %rd1, [_Z8baselinePf_param_0];
+cvta.to.global.u64 %rd2, %rd1;
+mov.u32 %r33, %tid.x;
+mov.u32 %r34, %ctaid.x;
+mov.u32 %r35, %ntid.x;
+mad.lo.s32 %r36, %r34, %r35, %r33;
+mul.wide.u32 %rd3, %r36, 4;
+add.s64 %rd4, %rd2, %rd3;
+ld.global.f32 %f1, [%rd4];
+cvt.rzi.s32.f32 %r7, %f1;
+mov.u32 %r5, 1;
+mov.u32 %r30, 0;
+mov.u32 %r32, -1;
+
+	{ .reg .s32 r0; .reg .pred p; shfl.sync.up.b32 r0|p, %r7, %r5, %r30, %r32; @p add.s32 r0, r0, %r7; mov.s32 %r3, r0;}
+
+	mov.u32 %r11, 2;
+
+	{ .reg .s32 r0; .reg .pred p; shfl.sync.up.b32 r0|p, %r3, %r11, %r30, %r32; @p add.s32 r0, r0, %r3; mov.s32 %r9, r0;}
+
+	mov.u32 %r17, 4;
+
+	{ .reg .s32 r0; .reg .pred p; shfl.sync.up.b32 r0|p, %r9, %r17, %r30, %r32; @p add.s32 r0, r0, %r9; mov.s32 %r15, r0;}
+
+	mov.u32 %r23, 8;
+
+	{ .reg .s32 r0; .reg .pred p; shfl.sync.up.b32 r0|p, %r15, %r23, %r30, %r32; @p add.s32 r0, r0, %r15; mov.s32 %r21, r0;}
+
+	mov.u32 %r29, 16;
+
+	{ .reg .s32 r0; .reg .pred p; shfl.sync.up.b32 r0|p, %r21, %r29, %r30, %r32; @p add.s32 r0, r0, %r21; mov.s32 %r27, r0;}
+
+	cvt.rn.f32.s32 %f2, %r27;
+st.global.f32 [%rd4], %f2;
+ret;
+
+}
+
+.visible .entry _Z4scanPf(
+.param .u64 _Z4scanPf_param_0
+)
+{
+.reg .pred %p<11>;
+.reg .f32 %f<17>;
+.reg .b32 %r<27>;
+.reg .b64 %rd<5>;
+
+
+ld.param.u64 %rd1, [_Z4scanPf_param_0];
+cvta.to.global.u64 %rd2, %rd1;
+mov.u32 %r1, %tid.x;
+shr.s32 %r2, %r1, 31;
+shr.u32 %r3, %r2, 27;
+add.s32 %r4, %r1, %r3;
+and.b32 %r5, %r4, -32;
+sub.s32 %r6, %r1, %r5;
+mov.u32 %r7, %ctaid.x;
+mov.u32 %r8, %ntid.x;
+mad.lo.s32 %r9, %r7, %r8, %r1;
+mul.wide.u32 %rd3, %r9, 4;
+add.s64 %rd4, %rd2, %rd3;
+ld.global.f32 %f1, [%rd4];
+mov.b32 %r10, %f1;
+mov.u32 %r11, 0;
+mov.u32 %r12, 1;
+mov.u32 %r13, -1;
+shfl.sync.up.b32 %r14|%p1, %r10, %r12, %r11, %r13;
+mov.b32 %f2, %r14;
+setp.gt.s32 %p2, %r6, 0;
+add.f32 %f3, %f1, %f2;
+selp.f32 %f4, %f3, %f1, %p2;
+mov.b32 %r15, %f4;
+mov.u32 %r16, 2;
+shfl.sync.up.b32 %r17|%p3, %r15, %r16, %r11, %r13;
+mov.b32 %f5, %r17;
+setp.gt.s32 %p4, %r6, 1;
+add.f32 %f6, %f4, %f5;
+selp.f32 %f7, %f6, %f4, %p4;
+mov.b32 %r18, %f7;
+mov.u32 %r19, 4;
+shfl.sync.up.b32 %r20|%p5, %r18, %r19, %r11, %r13;
+mov.b32 %f8, %r20;
+setp.gt.s32 %p6, %r6, 3;
+add.f32 %f9, %f7, %f8;
+selp.f32 %f10, %f9, %f7, %p6;
+mov.b32 %r21, %f10;
+mov.u32 %r22, 8;
+shfl.sync.up.b32 %r23|%p7, %r21, %r22, %r11, %r13;
+mov.b32 %f11, %r23;
+setp.gt.s32 %p8, %r6, 7;
+add.f32 %f12, %f10, %f11;
+selp.f32 %f13, %f12, %f10, %p8;
+mov.b32 %r24, %f13;
+mov.u32 %r25, 16;
+shfl.sync.up.b32 %r26|%p9, %r24, %r25, %r11, %r13;
+mov.b32 %f14, %r26;
+setp.gt.s32 %p10, %r6, 15;
+add.f32 %f15, %f13, %f14;
+selp.f32 %f16, %f15, %f13, %p10;
+st.global.f32 [%rd4], %f16;
+ret;
+
+}
+
+.visible .entry _ZN3cub17CUB_200200_700_NS11EmptyKernelIvEEvv()
+{
+
+
+
+ret;
+
+}
+
+
+
+Fatbin elf code:
+================
+arch = sm_70
+code version = [1,7]
+host = linux
+compile_size = 64bit

@@ -1,0 +1,8 @@
+/home/xiongqian/byf/cuda_code/reduce/build/CMakeFiles/rebuild_cache.dir
+/home/xiongqian/byf/cuda_code/reduce/build/CMakeFiles/op5_test.dir
+/home/xiongqian/byf/cuda_code/reduce/build/CMakeFiles/baseline_test.dir
+/home/xiongqian/byf/cuda_code/reduce/build/CMakeFiles/op4_test.dir
+/home/xiongqian/byf/cuda_code/reduce/build/CMakeFiles/op1_test.dir
+/home/xiongqian/byf/cuda_code/reduce/build/CMakeFiles/edit_cache.dir
+/home/xiongqian/byf/cuda_code/reduce/build/CMakeFiles/op2_test.dir
+/home/xiongqian/byf/cuda_code/reduce/build/CMakeFiles/op3_test.dir

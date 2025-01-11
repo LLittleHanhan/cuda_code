@@ -1,0 +1,4 @@
+/home/xiongqian/byf/cuda_code/gemm/build/CMakeFiles/edit_cache.dir
+/home/xiongqian/byf/cuda_code/gemm/build/CMakeFiles/rebuild_cache.dir
+/home/xiongqian/byf/cuda_code/gemm/build/CMakeFiles/op1_test.dir
+/home/xiongqian/byf/cuda_code/gemm/build/CMakeFiles/baseline_test.dir

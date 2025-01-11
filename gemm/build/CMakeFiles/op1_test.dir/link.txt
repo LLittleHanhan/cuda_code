@@ -1,0 +1,1 @@
+/usr/bin/g++ CMakeFiles/op1_test.dir/op1.cu.o -o op1_test  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/home/xiongqian/cuda-11.8/targets/x86_64-linux/lib/stubs" -L"/home/xiongqian/cuda-11.8/targets/x86_64-linux/lib"

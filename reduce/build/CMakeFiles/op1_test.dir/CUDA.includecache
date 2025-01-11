@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xiongqian/byf/cuda_code/reduce/op1.cu
+cuda_runtime.h
+-
+device_launch_parameters.h
+-
+stdlib.h
+-
+iostream
+-
+
